@@ -4,7 +4,13 @@
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
  
  <head>
- 
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" /> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" async></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" async></script>
  <b:include data='blog' name='all-head-content'/>
  
 <title>
@@ -19,7 +25,51 @@
  </b:if>
  </b:if>
  </title>
- <b:skin><![CDATA[ body#layout #widgetID { The Properties For Widget In Layout Page Goes Here } body { background:white; color:black; } ]]></b:skin>
+ <b:skin><![CDATA[
+ body#layout #widgetID { The Properties For Widget In Layout Page Goes Here } 
+
+
+body {
+text-align: center;
+}
+header .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	margin-bottom: .5rem;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.2;
+	color: inherit;
+	text-align: center;
+															}
+
+article {
+ width: 64%;
+ float: left;
+ font-family: sans-serif;
+ border-right: 1px solid #F4EEEE;
+}
+aside {
+float: left;
+width: 35%;
+}
+aside h2 {
+background: #262424;
+font-family: sans-serif;
+border-bottom: 2px solid #F2B25C;
+color: white;
+padding: 2px;
+}
+footer {
+float: left;
+width: 100%;
+background: #262424;
+border-top: 1px solid black;
+color: #F2B25C;
+}
+
+
+
+
+	]]></b:skin>
 
 </head>
 
