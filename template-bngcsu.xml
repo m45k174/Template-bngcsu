@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+
+<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+ 
+ <head>
+ 
+ <b:include data='blog' name='all-head-content'/>
+ 
+<title>
+
+ <b:if cond='data:blog.pageType == &quot;index&quot;'>
+ <data:blog.pageTitle/>
+ <b:else/>
+ <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+ <data:blog.pageName/> | <data:blog.title/>
+ <b:else/>
+ Page Not Found | <data:blog.title/>
+ </b:if>
+ </b:if>
+ </title>
+ <b:skin><![CDATA[ body#layout #widgetID { The Properties For Widget In Layout Page Goes Here } body { background:white; color:black; } ]]></b:skin>
+
+</head>
+
+<body>
+
+<header>
+
+<b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+<b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
+</b:section>
+
+</header>
+
+<article>
+
+<b:section class='main' id='main' preferred='yes' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+</b:widget>
+</b:section>
+
+</article>
+
+<aside>
+
+<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
+</b:section>
+
+</aside>
+
+<footer>
+
+<div class="copyrights" style="clear: both;">
+Copyright © 2015 Your blogger template
+</div>
+
+</footer>
+
+</body>
+
+</html>
