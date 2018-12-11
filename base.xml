@@ -19,7 +19,51 @@
  </b:if>
  </b:if>
  </title>
- <b:skin><![CDATA[ body#layout #widgetID { The Properties For Widget In Layout Page Goes Here } body { background:white; color:black; } ]]></b:skin>
+ <b:skin>
+ <![CDATA[ body#layout #widgetID { The Properties For Widget In Layout Page Goes Here } 
+  body { 
+         background:white; 
+         color:black; 
+   					 padding: 0px;
+									margin: 0px;
+        } 
+header h1 {
+margin: 0px;
+											}
+header {
+padding: 10px 0px;
+border-bottom: 2px solid #262424;
+font-family: sans-serif;
+background: #F2B25C;
+color: white;
+text-shadow: 2px 2px 2px black;
+								}
+article {
+ width: 64%;
+ float: left;
+ font-family: sans-serif;
+ border-right: 1px solid #F4EEEE;
+								}	
+aside {
+float: left;
+width: 35%;
+						}
+aside h2 {
+background: #262424;
+font-family: sans-serif;
+border-bottom: 2px solid #F2B25C;
+color: white;
+padding: 2px;
+									}
+footer {
+float: left;
+width: 100%;
+background: #262424;
+border-top: 1px solid black;
+color: #F2B25C;
+								}
+          ]]>
+  </b:skin>
 
 </head>
 
