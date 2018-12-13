@@ -246,8 +246,8 @@ color: #F2B25C;
 
 <article>
 
-<b:section class='main' id='main' preferred='yes' showaddelement='no'>
-<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog'>
+<b:section class='main' id='main container-fluid' preferred='yes' showaddelement='no'>
+<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
 </b:widget>
 </b:section>
 
@@ -262,8 +262,9 @@ color: #F2B25C;
 
 <footer>
 
-<div class="copyrights" style="clear: both;">
-	Copyright (c) 2018 <a href="https://www.distribure.cf/">Distribution Core</a>
+<div class="copyrights card bg-light text-dark card-body">
+
+	Copyright (c) 2018 <a href='https://www.distribure.cf/'>Distribution Core</a> | MIT License |
 
 </div>
 
