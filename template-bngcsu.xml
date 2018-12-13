@@ -201,16 +201,6 @@ header .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	color: inherit;
 	text-align: center;
 															}
-
-article {
- width: 64%;
- float: left;
- font-family: sans-serif;
- border-right: 1px solid #F4EEEE;
-}
-aside {
-float: left;
-width: 35%;
 }
 aside h2 {
 background: #262424;
@@ -219,18 +209,7 @@ border-bottom: 2px solid #F2B25C;
 color: white;
 padding: 2px;
 }
-footer {
-float: left;
-width: 100%;
-background: #262424;
-border-top: 1px solid black;
-color: #F2B25C;
-}
-
-
-
-
-	]]></b:skin>
+]]></b:skin>
 
 </head>
 
