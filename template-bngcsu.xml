@@ -54,7 +54,7 @@ padding: 2px;
 
 <header>
 
-<b:section class='header' id='header container-fluid' maxwidgets='1' showaddelement='no'>
+<b:section class='header container-fluid' id='header' maxwidgets='1' showaddelement='no'>
 <b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
 </b:section>
 
@@ -62,7 +62,7 @@ padding: 2px;
 
 <article>
 
-<b:section class='main' id='main container-fluid' preferred='yes' showaddelement='yes'>
+<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
 </b:widget>
 </b:section>
