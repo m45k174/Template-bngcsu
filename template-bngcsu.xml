@@ -37,12 +37,12 @@ header .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
 	line-height: 1.2;
 	color: inherit;
 	text-align: center;
-															}
+
 }
 aside h2 {
 background: #262424;
 font-family: sans-serif;
-border-bottom: 2px solid #F2B25C;
+border-bottom: 2px solid;
 color: white;
 padding: 2px;
 }
