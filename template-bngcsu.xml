@@ -85,7 +85,21 @@ padding: 2px;
 </div>
 
 </footer>
-
+ <script src='//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js'/>
+    <script>
+        window.addEventListener("load", function(){
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#000"
+                    },
+                    "button": {
+                        "background": "#f1d600"
+                    }
+                }
+            })
+        });
+    </script>
 </body>
 
 </html>
