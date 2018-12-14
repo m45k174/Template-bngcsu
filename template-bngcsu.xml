@@ -60,9 +60,9 @@ padding: 2px;
 
 </header>
 
-<article>
+<article style="margin-left: auto; margin-right: auto; width: 50%;">
 
-<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes' style='text-align: center'>
+<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
  
 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
 </b:widget>
