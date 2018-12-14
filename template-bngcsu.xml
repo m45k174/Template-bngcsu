@@ -32,6 +32,7 @@
 </head>
 
 <body>
+	
 
 <header>
 
@@ -41,22 +42,20 @@
 
 </header>
 
-<aside>
+ <aside>
 
-<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
-
+<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes' growth='horizontal' >
+	<b:widget id='PageList1' locked='false' title='Pages' type='PageList'></b:widget>
 </b:section>
 
 </aside>
 	
 <article style="margin-left: auto; margin-right: auto; width: 50%;">
 	
-<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
- 
-<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid card bg-light text-dark card-body'>
-</b:widget>
-
-</b:section>
+	<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
+ 		<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
+		</b:widget>
+ 	</b:section>
 
 </article>
 
