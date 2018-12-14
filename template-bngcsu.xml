@@ -63,8 +63,10 @@ padding: 2px;
 <article>
 
 <b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
+<!-- 
 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
 </b:widget>
+-->
 </b:section>
 
 </article>
@@ -72,19 +74,7 @@ padding: 2px;
 <aside>
 
 <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
-	  <!-- BLOG SOCIAL ICONS -->
-        <div class='col-md-4'>
-          <ul class='social-icons'>
-            <!-- GANTI DENGAN ALAMAT AKUN MEDSOS ANDA -->
-            <li><a href='' title='Facebook'><span class='fa fa-facebook fa-fw'/></a></li>
-            <li><a href='' title='Twitter'><span class='fa fa-twitter fa-fw'/></a></li>
-            <li><a href='' title='Google Plus'><span class='fa fa-google-plus fa-fw'/></a></li>
-            <li><a href='' title='Pinterest'><span class='fa fa-pinterest fa-fw'/></a></li>
-            <li><a href='' title='Instagram'><span class='fa fa-instagram fa-fw'/></a></li>
-            <li><a href='' title='RSS'><span class='fa fa-rss fa-fw'/></a></li>
-          </ul>
-        </div>
-<!-- //BLOG SOCIAL ICONS -->
+
 </b:section>
 
 </aside>
