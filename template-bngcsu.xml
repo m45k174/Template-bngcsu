@@ -62,11 +62,11 @@ padding: 2px;
 
 <article>
 
-<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
-<!-- 
+<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes' style='text-align: center'>
+ 
 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
 </b:widget>
--->
+
 </b:section>
 
 </article>
