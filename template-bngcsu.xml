@@ -41,8 +41,6 @@
 
 </header>
 
-<article style="margin-left: auto; margin-right: auto; width: 50%;">
-
 <aside>
 
 <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
@@ -50,6 +48,8 @@
 </b:section>
 
 </aside>
+	
+<article style="margin-left: auto; margin-right: auto; width: 50%;">
 	
 <b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
  
