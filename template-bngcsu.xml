@@ -25,28 +25,9 @@
  </b:if>
  </b:if>
  </title>
- <b:skin><![CDATA[
-
-body {
-text-align: center;
-}
-header .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-	margin-bottom: .5rem;
-	font-family: inherit;
-	font-weight: 500;
-	line-height: 1.2;
-	color: inherit;
-	text-align: center;
-
-}
-aside h2 {
-background: #262424;
-font-family: sans-serif;
-border-bottom: 2px solid;
-color: white;
-padding: 2px;
-}
-]]></b:skin>
+ <b:skin>
+	 <![CDATA[body { text-align: center; }]]>
+</b:skin>
 
 </head>
 
@@ -54,7 +35,7 @@ padding: 2px;
 
 <header>
 
-<b:section class='header container-fluid' id='header' maxwidgets='1' showaddelement='no'>
+<b:section class='header container-fluid jumbotron text-center' id='header' maxwidgets='1' showaddelement='no'>
 <b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
 </b:section>
 
@@ -72,7 +53,7 @@ padding: 2px;
 	
 <b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
  
-<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
+<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid card bg-light text-dark card-body'>
 </b:widget>
 
 </b:section>
