@@ -36,19 +36,28 @@
 
 <header>
 
-<b:section class='header container-fluid jumbotron text-center' id='header' maxwidgets='1' showaddelement='no'>
-<b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
+<b:section class='header container-fluid jumbotron text-center navbar navbar-expand-sm bg-light' id='header' maxwidgets='3' showaddelement='yes'>
+
+    <b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
+	<ul class="navbar-nav">
+	<li class="nav-item"><b:section id='BlogSearch'>
+	<b:widget id='BlogSearch1' locked='false' title='Search' type='BlogSearch'></b:widget>
+	</b:section ></li>
+	<li class="nav-item"><b:section id='PageList'>
+	<b:widget id='PageList1' locked='false' title='' type='PageList'></b:widget>
+	</b:section></li>
+	</ul>
 </b:section>
 
 </header>
 
- <aside>
 
-<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes' growth='horizontal' >
-	<b:widget id='PageList1' locked='false' title='Pages' type='PageList'></b:widget>
+
+<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'  >
+
 </b:section>
 
-</aside>
+
 	
 <article style="margin-left: auto; margin-right: auto; width: 50%;">
 	
