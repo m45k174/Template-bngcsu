@@ -62,6 +62,14 @@ padding: 2px;
 
 <article style="margin-left: auto; margin-right: auto; width: 50%;">
 
+<aside>
+
+<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
+
+</b:section>
+
+</aside>
+	
 <b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
  
 <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
@@ -70,14 +78,6 @@ padding: 2px;
 </b:section>
 
 </article>
-
-<aside>
-
-<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
-
-</b:section>
-
-</aside>
 
 <footer>
 
