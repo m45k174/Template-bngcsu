@@ -46,7 +46,7 @@
 	
 <div class='container'>
 	<b:section id='navigation-wrapper' showaddelement='yes'>
-		<b:widget id='HTML11' locked='false' title='top navigation' type='HTML'>
+		
   		<b:includable id='main'>
 			<ul class='menu'>
 				<data:content/>
@@ -55,7 +55,7 @@
 		</b:widget>
 	</b:section>
 			
-	<div class='menu-mobile'/>
+	<div class='nav-menu'/>
 	
 	<div id='top-search'>
 		
@@ -80,12 +80,12 @@
 <aside>
 
 <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes' growth='horizontal' >
-	<b:widget id='PageList1' locked='false' title='Pages' type='PageList'></b:widget>
+	
 </b:section>
 
 </aside>
 	
-<article style="margin-left: auto; margin-right: auto; width: 50%;">
+<article style="margin-left: auto; margin-right: auto; width: 85%;">
 	
 	<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
  		<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
