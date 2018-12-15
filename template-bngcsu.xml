@@ -39,47 +39,45 @@
 <b:section class='header container-fluid jumbotron text-center' id='header' maxwidgets='1' showaddelement='no'>
 <b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
 </b:section>
+
+</header>
+	
 <div id='navigation'>
 	
-		<div class='container'>
-			<b:section id='navigation-wrapper' showaddelement='yes'>
-<b:widget id='HTML11' locked='false' title='top navigation' type='HTML'>
-  <b:includable id='main'>
-						<ul class='menu'>
-							<data:content/>
-						</ul>
-					</b:includable>
-</b:widget>
-</b:section>
+<div class='container'>
+	<b:section id='navigation-wrapper' showaddelement='yes'>
+		<b:widget id='HTML11' locked='false' title='top navigation' type='HTML'>
+  		<b:includable id='main'>
+			<ul class='menu'>
+				<data:content/>
+			</ul>
+		</b:includable>
+		</b:widget>
+	</b:section>
 			
-				
-				
-			<div class='menu-mobile'/>
-			
-			<div id='top-search'>
-					<a href='#'><i class='fa fa-search'/></a>
-			</div>
-			<div class='show-search'>
-				<form action='/search' id='searchform' method='get' role='search'>
-					<div>
-						<input id='s' name='q' placeholder='Search and hit enter...' type='text'/>
-					</div>
-				</form>	
-			</div>
-			<b:section id='top-social' showaddelement='yes'>
-<b:widget id='HTML10' locked='false' title='top social' type='HTML'>
-  <b:includable id='main'>
-						<data:content/>
-					</b:includable>
-</b:widget>
-</b:section>							
-		</div>
-		
-	</div>
+	<div class='menu-mobile'/>
 	
-</header>
+	<div id='top-search'>
+		
 
- <aside>
+		<form action='/search' id='searchform' method='get' role='search'>
+		
+			<a href='#'><i class='fa fa-search'/></a> <input id='search' name='query' placeholder= ' Search here' type='text'/>
+		
+		</form>	
+	</div>
+
+	<b:section id='social' showaddelement='yes'>
+		
+  		<b:includable id='main'>
+			<data:content/>
+		</b:includable>
+		
+	</b:section>							
+</div>
+</div>
+	
+<aside>
 
 <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes' growth='horizontal' >
 	<b:widget id='PageList1' locked='false' title='Pages' type='PageList'></b:widget>
