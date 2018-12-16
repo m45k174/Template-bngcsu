@@ -7,10 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" /> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" async></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" async></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" async></script>
+
  <b:include data='blog' name='all-head-content'/>
  
 <title>
@@ -42,27 +39,18 @@
 
 </header>
 	
-<div id='navigation'>
+
 	
-<div class='container'>
-	<b:section id='navigation-wrapper' showaddelement='yes'>
-		
-  		<b:includable id='main'>
-			<ul class='menu'>
-				<data:content/>
-			</ul>
-		</b:includable>
-		</b:widget>
-	</b:section>
-			
-	<div class='nav-menu'/>
+<div id='navigation' class='container'>
+				
+	<div class='navbar navbar-expand-sm bg-light navbar-nav nav-item'>
 	
 	<div id='top-search'>
 		
 
 		<form action='/search' id='searchform' method='get' role='search'>
 		
-			<a href='#'><i class='fa fa-search'/></a> <input id='search' name='query' placeholder= ' Search here' type='text'/>
+          Search: <input id='search' name='query' placeholder= '' type='text'/>
 		
 		</form>	
 	</div>
@@ -103,6 +91,10 @@
 </div>
 
 </footer>
+	  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	
 </body>
 
