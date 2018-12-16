@@ -103,7 +103,15 @@
 </div>	
 
 <footer>
-
+		<div itemtype = "http://schema.org/Person">
+                    <a href="https://www.facebook.com/#"><i class="fa fa-facebook-square fa-3x"></i></a>
+	       	    <a itemprop="email" href="mailto:"><i class="fa fa-envelope-o fa-3x" style=""></i></a>
+	            <a href="#"><i class="fa fa-comment-o fa-3x"></i></a>
+	            <a href="#"><i class="fa fa-pie-chart fa-3x"></i></a>
+	            <a href="#"><i class="fa fa-rss-square fa-3x"></i></a>
+	            <a href="#"><i class="fa fa-sitemap fa-3x"></i></a>
+	  
+       		</div>
 <div class="copyrights card bg-light text-dark card-body">
 
 	Copyright (c) 2018 <a href='https://www.distribure.cf/'>Distribution Core</a> | MIT License |
