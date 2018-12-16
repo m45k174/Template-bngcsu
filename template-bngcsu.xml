@@ -45,15 +45,21 @@
 				
 	<div class='navbar-expand-sm '>
 	
-	<ul class="navbar-nav justify-content-center navbar-expand-sm">
+	<ul class="navbar-nav  navbar-expand-sm">
  
-		<li class="nav-item">
+		<li class="nav-item justify-content-end">
 
 		<form class="form-inline" action="/search" method='get' role='search'>
      	<input id='search' name='query' class="form-control mr-sm-2" type="text" placeholder="Search" />
     		 
 		</form>
 		
+		</li>
+		<li class='nav-item'>
+			<b:section id='pagelist'>
+			<b:widget id='PageList1' locked='false' title='Pages' type='PageList'>
+			</b:widget>
+			</b:section>
 		</li>
 	</ul>
 		
