@@ -15,6 +15,6 @@ Knowledge required for using this template:
  1. Basic understanding of HTML
  2. CSS
  3. Bootstrap 4 tags
- 4. Knowing how to use Google or Duck Duck Go (my favourite) for clearing doubts.
+ 4. Knowing how to use <a href='www.google.com'>Google</a> or <a href='https://duckduckgo.com/?t=hp'>Duck Duck Go</a> (my favourite) for clearing doubts.
  
 Enjoy!
