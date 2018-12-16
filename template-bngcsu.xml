@@ -43,7 +43,7 @@
 	
 <div id='navigation' >
 				
-	<nav class='navbar navbar-expand-sm justify-content-center bg-dark navbar-dark'>
+	<nav class='navbar navbar-expand-sm justify-content-center navbar-light'>
 	
 	<a class="navbar-brand" href="#">Navbar</a>
   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
