@@ -31,56 +31,53 @@
 <body>
 	
 
-<header>
+<header class='header jumbotron jumbotron-fluid text-center' >
 
-<b:section class='header container-fluid jumbotron text-center' id='header' maxwidgets='1' showaddelement='no'>
-<b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
-</b:section>
-
+	<b:section id='header' maxwidgets='1' showaddelement='no'>
+		<b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
+	</b:section>
+	
 </header>
 	
 
 	
 <div id='navigation' class='container'>
 				
-	<div class='navbar navbar-expand-sm bg-light navbar-nav nav-item'>
+	<div class='navbar-expand-sm bg-dark navbar-dark'>
 	
-	<div id='top-search'>
+	<ul class="navbar-nav justify-content-center navbar-expand-sm bg-dark navbar-dark">
+ 
+		<li class="nav-item">
+		<form class="form-inline" action="/search" method='get' role='search'>
+     	 	 <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+    		 <button class="btn btn-success" type="submit">Search</button>
+		</form>
+		</li>
+	</ul>
 		
-
-		<form action='/search' id='searchform' method='get' role='search'>
-		
-          Search: <input id='search' name='query' placeholder= '' type='text'/>
-		
-		</form>	
 	</div>
-
-	<b:section id='social' showaddelement='yes'>
 		
-  		<b:includable id='main'>
-			<data:content/>
-		</b:includable>
+</div>
 		
-	</b:section>							
-</div>
-</div>
+<div class='row'>
+	<article style="margin-left: auto; margin-right: auto; width: 85%;">
 	
-<aside>
+		<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
+ 			<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
+			</b:widget>
+ 		</b:section>
+	
+	</article>
+		
+	<aside class='col-sm-4'>
 
-<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes' growth='horizontal' >
+		<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
 	
-</b:section>
+		</b:section>
 
-</aside>
-	
-<article style="margin-left: auto; margin-right: auto; width: 85%;">
-	
-	<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
- 		<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
-		</b:widget>
- 	</b:section>
+	</aside>
 
-</article>
+</div>	
 
 <footer>
 
