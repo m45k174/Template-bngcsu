@@ -1,4 +1,5 @@
-# Template-bngcsu
+# Template-bngcsu 
+[![Build Status](https://travis-ci.org/Irajarshibhadra/Template-bngcsu.svg?branch=master)](https://travis-ci.org/Irajarshibhadra/Template-bngcsu)
 A simple clean easily customizable blogspot template 
 
 https://articlesteller.com/build-your-own-blogger-template-from-scratch/ is the site that helped to built the skeleton. :)
