@@ -1,129 +1,220 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-
 <html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
- 
- <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" /> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <head>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet'/>
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'/>
 
- <b:include data='blog' name='all-head-content'/>
- 
-<title>
+    <b:include data='blog' name='all-head-content'/>
+    <title>
+      <b:if cond='data:blog.pageType == &quot;index&quot;'>
+        <data:blog.pageTitle/>
+        <b:else/>
+        <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
+          <data:blog.pageName/>
+          |
+          <data:blog.title/>
+          <b:else/>
+          Page Not Found |
+          <data:blog.title/>
+        </b:if>
+      </b:if>
+    </title>
+    <b:skin><![CDATA[
 
- <b:if cond='data:blog.pageType == &quot;index&quot;'>
- <data:blog.pageTitle/>
- <b:else/>
- <b:if cond='data:blog.pageType != &quot;error_page&quot;'>
- <data:blog.pageName/> | <data:blog.title/>
- <b:else/>
- Page Not Found | <data:blog.title/>
- </b:if>
- </b:if>
- </title>
- <b:skin>
-	 <![CDATA[body { text-align: center; }]]>
-</b:skin>
+body { text-align: center; }
 
-</head>
+    ]]></b:skin>
+  </head>
+  <body>
+    <header class='header  text-center'>
+      <b:section id='header' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Header1' locked='true' title='' type='Header' version='1'>
+          <b:widget-settings>
+            <b:widget-setting name='displayUrl'/>
+            <b:widget-setting name='displayHeight'>0</b:widget-setting>
+            <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
+            <b:widget-setting name='useImage'>false</b:widget-setting>
+            <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+            <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+            <b:widget-setting name='displayWidth'>0</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+            <b:if cond='data:useImage'>
+              <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
+                <!--
+Show image as background to text. You can't really calculate the width
+reliably in JS because margins are not taken into account by any of
+clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
+width if the user is using shrink to fit.
+This results in a margin-width's worth of pixels being cropped. If the
+user is not using shrink to fit then we expand the header.
+-->
+                <b:if cond='data:mobile'>
+                  <div id='header-inner'>
+                    <div class='titlewrapper' style='background: transparent'>
+                      <h1 class='title' style='background: transparent; border-width: 0px'>
+                        <b:include name='title'/>
+                      </h1>
+                    </div>
+                    <b:include name='description'/>
+                  </div>
+                  <b:else/>
+                  <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height                      + &quot;_height: &quot; + data:height                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
+                    <div class='titlewrapper' style='background: transparent'>
+                      <h1 class='title' style='background: transparent; border-width: 0px'>
+                        <b:include name='title'/>
+                      </h1>
+                    </div>
+                    <b:include name='description'/>
+                  </div>
+                </b:if>
+                <b:else/>
+                <!--Show the image only-->
+                <div id='header-inner'>
+                  <a expr:href='data:blog.homepageUrl' style='display: block'>
+                    <img expr:alt='data:title' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
+                  </a>
+                  <!--Show the description-->
+                  <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
+                    <b:include name='description'/>
+                  </b:if>
+                </div>
+              </b:if>
+              <b:else/>
+              <!--No header image -->
+              <div id='header-inner'>
+                <div class='titlewrapper'>
+                  <h1 class='title'>
+                    <b:include name='title'/>
+                  </h1>
+                </div>
+                <b:include name='description'/>
+              </div>
+            </b:if>
+          </b:includable>
+          <b:includable id='description'>
+            <div class='descriptionwrapper'>
+              <p class='description'>
+                <span>
+                  <data:description/>
+                </span>
+              </p>
+            </div>
+          </b:includable>
+          <b:includable id='title'>
+            <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+              <data:title/>
+            </b:tag>
+          </b:includable>
+        </b:widget>
+      </b:section>
+    </header>
 
-<body>
-	
+    <div id='navigation'>
+      <nav class='navbar navbar-expand-sm justify-content-center navbar-light'>
+        <a class='navbar-brand' href='javascript.void(0)'>
+          Pages
+        </a>
+        <button class='navbar-toggler' data-target='#collapsibleNavbar' data-toggle='collapse' type='button'>
+          <span class='navbar-toggler-icon'/>
+        </button>
+        <div class='collapse navbar-collapse' id='collapsibleNavbar'>
+          <ul class='navbar-nav'>
+            <li class='nav-item'>
+              <a class='nav-link' href='#'>
+                Link 1
+              </a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='#'>
+                Link 2
+              </a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='#'>
+                Link 3
+              </a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='#'>
+               Link 4
+              </a>
+            </li>
+            <li class='nav-item'>
+              <a class='nav-link' href='#'>
+                Link 5
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class='navbar-nav'>
+          <li class='nav-item '>
+            <form action='/search' class='form-inline' method='get' role='search'>
+              <input class='form-control mr-sm-2' id='search' name='query' placeholder='Search' type='text'/>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div>
+      <article style='margin-left: auto; margin-right: auto; width: 85%;'>
+        <b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
+          <b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' version='1'>
 
-<header class='header jumbotron jumbotron-fluid text-center' >
+          </b:widget>
+        </b:section>
+      </article>
+      <!--
+       Uncomment for sidebar
+      <aside class='col-sm-4'>
+        <b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
+        </b:section>
+      </aside>
+    -->
+    </div>
+    <footer>
+      <div itemtype='http://schema.org/Person'>
+        <a href='https://www.facebook.com/#'>
+          <i class='fa fa-facebook-square fa-3x'/>
+        </a>
+        <a href='mailto:' itemprop='email'>
+          <i class='fa fa-envelope-o fa-3x' style=''/>
+        </a>
+        <a href='https://www.instagram.com/#'>
+          <i class='fa fa-instagram fa-3x'/>
+        </a>
+        <a href='https://www.bngcsu.asso.eu.org/sitemap.xml'>
+          <i class='fa fa-sitemap fa-3x'/>
+        </a>
+        <a href='https://github.com/m45k174/Template-bngcsu'>
+          <i class='fa fa-github fa-3x'/>
+        </a>
+      </div>
 
-	<b:section id='header' maxwidgets='1' showaddelement='no'>
-		<b:widget id='Header1' locked='true' title='' type='Header'></b:widget>
-	</b:section>
-	
-</header>
-	
 
-	
-<div id='navigation' >
-				
-	<nav class='navbar navbar-expand-sm justify-content-center navbar-light'>
-	
-	<a class="navbar-brand" href="#">Navbar</a>
-  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    	<span class="navbar-toggler-icon"></span>
-  	</button>
-  	<div class="collapse navbar-collapse" id="collapsibleNavbar">
-    	<ul class="navbar-nav">
-    	  	<li class="nav-item">
-        		<a class="nav-link" href="#">Link</a>
-      		</li>
-      		<li class="nav-item">
-        		<a class="nav-link" href="#">Link</a>
- 	        </li>
-      		<li class="nav-item">
-        		<a class="nav-link" href="#">Link</a>
-      		</li>    
-    	</ul>
-  	</div>  	
-	
-		
-	<ul class="navbar-nav">
- 
-		<li class="nav-item ">
-
-		<form class="form-inline" action="/search" method='get' role='search'>
-     		<input id='search' name='query' class="form-control mr-sm-2" type="text" placeholder="Search" />
-		</form>
-			
-		</li>
-		
-		
-	</ul>
-		
-		
-	</nav>
-		
+<div class='card'>
+  <div class='card-body bg-light text-dark'>
+    <h4 class='card-title'/>
+    <p class='card-text'> Copyright (c) 2019
+        <a class='card-link' href='https://www.linkedin.com/in/iamrajarshibhadra/'>
+          Rajarshi Bhadra
+        </a>
+      <br/>  Code is licensed under
+        <a class='card-link' href='https://github.com/m45k174/Template-bngcsu/blob/master/LICENSE'>
+          MIT License
+        </a>
+        and avaliable at
+        <a class='card-link' herf='https://github.com/m45k174/Template-bngcsu'>
+          Github
+        </a>
+    </p>
+  </div>
 </div>
-		
-<div class='row'>
-	<article class='col-sm-4' style="margin-left: auto; margin-right: auto; width: 85%;">
-	
-		<b:section class='main  container-fluid' id='main' preferred='yes' showaddelement='yes'>
- 			<b:widget id='Blog1' locked='true' title='Blog Posts' type='Blog' class='container-fluid'>
-			</b:widget>
- 		</b:section>
-	
-	</article>
-		
-	<aside class='col-sm-4'>
-
-		<b:section class='sidebar' id='sidebar' maxwidgets='' showaddelement='yes'>
-	
-		</b:section>
-
-	</aside>
-
-</div>	
-
-<footer>
-		<div itemtype = "http://schema.org/Person">
-                    <a href="https://www.facebook.com/#"><i class="fa fa-facebook-square fa-3x"></i></a>
-	       	    <a itemprop="email" href="mailto:"><i class="fa fa-envelope-o fa-3x" style=""></i></a>
-	            <a href="#"><i class="fa fa-comment-o fa-3x"></i></a>
-	            <a href="#"><i class="fa fa-pie-chart fa-3x"></i></a>
-	            <a href="#"><i class="fa fa-rss-square fa-3x"></i></a>
-	            <a href="#"><i class="fa fa-sitemap fa-3x"></i></a>
-	  
-       		</div>
-<div class="copyrights card bg-light text-dark card-body">
-
-	Copyright (c) 2018 Rajarshi Bhadra | <a href='https://github.com/Irajarshibhadra/Template-bngcsu/blob/master/LICENSE'>MIT License</a> |
-
-</div>
-
-</footer>
-	  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-	
-</body>
-
+    </footer>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'/>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'/>
+  </body>
 </html>
